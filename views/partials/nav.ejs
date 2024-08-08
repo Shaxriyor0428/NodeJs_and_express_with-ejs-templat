@@ -1,0 +1,21 @@
+<!-- <nav>
+    <ul>
+        <li class="active"><a href="/">Home</a></li>
+        <li class=""><a href="/users">Users</a></li>
+        <li class=""><a href="/jobs">Jobs</a></li>
+        <li class=""><a href="/gallery">Gallery</a></li>
+        <li class=""><a href="/contact">Contacts</a></li>
+    </ul>
+</nav> -->
+
+
+<nav>
+    <ul>
+        <li <% if(packName === "main"){ %> class="active" <% } %> ><a href="/">Home</a></li>
+        <li <% if(packName === "users"){ %> class="active" <% } %>><a href="/users">Users</a></li>
+        <li <% if(packName === "jobs"){ %> class="active" <% } %>><a href="/jobs">Jobs</a></li>
+        <li <% if(packName === "gallery"){ %> class="active" <% } %>><a href="/gallery">Gallery</a></li>
+        <li <% if(packName === "contact"){ %> class="active" <% } %>><a href="/contact">Contacts</a></li>
+        <li <% if(packName === "posts"){ %> class="active" <% } %>><a href="/allPosts">Posts</a></li>
+    </ul>
+</nav>

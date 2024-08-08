@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+     <%- include("./partials/head.ejs") %>
+    <style>
+        h4{
+            display: inline;
+        }
+    </style>
+  <body>
+      <%- include("./partials/nav.ejs") %>
+    <h1>Post </h1>
+    <p><h4>UserId: </h4><%=user.userId %> </p>
+    <p><h4>Id: </h4><%=user.ids %> </p>
+    <p><h4>Title: </h4><%=user.title %> </p>
+    <p><h4>Body: </h4><%=user.body %> </p>
+    <br>
+    <a href="/edit-postbyid/<%=user.id %>">Tahrirlash</a>
+    <button data-id="<%=user.id %>" id="deleteButton">Delete</button>
+
+    <script>
+        const deleteButton = document.getElementById("deleteButton");
+        deleteButton.addEventListener("click", (e) =>{
+            const dataId = e.target?.dataset.id || null;
+            if(dataId) {
+                   fetch (`/royxat/${dataId}`,{
+                    method:"DELETE",
+                }).then(()=> {
+                    console.log("User deleted");
+                    alert("User deleted");
+                    setTimeout(() => {
+                        window.location.href = "/allPosts";
+                    }, 1000);
+                });
+            }
+        });
+    </script>
+  </body>
+</html>

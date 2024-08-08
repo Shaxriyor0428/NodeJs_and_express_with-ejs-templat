@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/head.ejs") %>
+  <body>
+    <%- include("./partials/nav.ejs") %>
+    <h1>Contact sahifasi</h1>
+
+    <div class="box">
+      <ol class="messages">
+        <h3>Usernames:</h3>
+        <% users.forEach(user =>{ %>
+        <li><%=user.username %></li>
+        <% }); %>
+      </ol>
+      <ol class="messages">
+        <h3>Phones:</h3>
+        <% users.forEach(user =>{ %>
+        <li><%=user.phone %></li>
+        <% }); %>
+      </ol>
+      <ol class="messages">
+        <h3>Address:</h3>
+        <% users.forEach(user =>{ %>
+        <li><%=user.address.city %></li>
+        <% }); %>
+      </ol>
+    </div>
+  </body>
+</html>

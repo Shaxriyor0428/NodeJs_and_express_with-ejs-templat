@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("./partials/head.ejs") %>
+<body>
+  <nav>
+    <%- include("./partials/nav.ejs") %>
+  </nav>
+  <h2>Yangi post qo'shish oynasi</h2>
+  <form action="/yangi-post" method="post" id="post">
+    <label for="title">Title kiriting:</label>
+    <input type="text" name="title" id="title"><br><br>
+
+    <label for="id">Id kiriting:</label>
+    <input type="text" name="id" id="id"><br><br>
+
+    <button type="submit">Qo'shish</button>
+  </form>
+</body>
+</html>

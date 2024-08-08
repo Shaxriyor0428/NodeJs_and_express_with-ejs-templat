@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+     <%- include("./partials/head.ejs") %>
+  <body>
+    <nav>
+     <%- include("./partials/nav.ejs") %>
+     <h1>Barcha postlar ro'yxati</h1>
+     <h2>1. Delete qilish uchun bitta postni tanlang</h2>
+     <h2>2. Tahrirlash uchun bitta postni tanlang</h2>
+     <h2>3. Bitta post haqida malumotlarni ko'rish uchun tanlang</h2>
+    <a class="add" href="/yangi-post"><h2>4.Yangi post qo'shish uchun bosing</h2></a>
+
+    <div class="posts">
+        <% data.forEach(user => { %>
+            <p><a href="/royxat/<%=user.id %>"> UserId: <%=user.userId %> Id: <%=user.id %> Title: <%=user.title %> </a></p>
+        <% });  %>
+    </div>
+
+  </body>
+</html>
